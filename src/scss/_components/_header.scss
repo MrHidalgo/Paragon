@@ -6,7 +6,14 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	box-shadow: 0 2px 5px 0 rgba(#000, 0);
 	background-color: #ede9e0;
+	@include transition(box-shadow);
+
+	&.header--fixed {
+		box-shadow: 0 2px 5px 0 rgba(#000, 0.05);
+		@include transition(box-shadow);
+	}
 
 	&__wrapper {
 		display: flex;
@@ -71,6 +78,10 @@
 				color: #382713;
 				font-size: 18px;
 				@include transition(color);
+
+				&.icon-mail {
+					font-size: 20px;
+				}
 			}
 		}
 	}

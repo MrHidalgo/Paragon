@@ -6,14 +6,14 @@ header#header.header
 			.header__wrapper-left
 
 				.logo.logo--header
-					a.logo__btn(href="#")
+					a.logo__btn(href="/")
 						img.logo__img(src="img/logo.svg" alt="")
 
 			.header__wrapper-right
 
 				nav.header__nav
-					a.header__nav-link(href="#") Блог
-					a.header__nav-link(href="#") Обо Мне
+					a.header__nav-link(href="/blog.html" class!= (pageClassName === 'p-blog')?'is-active':'') Блог
+					a.header__nav-link(href="/abouts.html" class!= (pageClassName === 'p-about')?'is-active':'') Обо Мне
 
 				.header__action
 					a.header__action-btn(href="#")

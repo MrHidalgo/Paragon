@@ -1,6 +1,9 @@
 // LOGOTYPE :: START
 
 .logo {
+	position: relative;
+	top: -1px;
+
 	&__btn {
 		display: flex;
 		align-items: flex-start;

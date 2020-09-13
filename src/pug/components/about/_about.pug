@@ -1,0 +1,48 @@
+// SECTION :: START
+
+section#about.about
+	.c-grid
+		.about__wrapper
+			.about__wrapper-left
+
+				p.about__title Обо мне
+
+				.about__details
+					img(src="img/logo.svg" alt="")
+					.about__details-text
+						p!= "Всем привет, меня зовут <strong>Paragon.</strong>"
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+				.about__img
+					img(src="img/img-about.jpg" srcset="img/img-about@2x.jpg 2x" alt="")
+
+				p.about__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+				.header__action
+					a.header__action-btn(href="#")
+						i.icon-font.icon-instagram
+					a.header__action-btn(href="#")
+						i.icon-font.icon-mail
+
+			.about__wrapper-right
+
+				.about__line
+
+				p.about__subtitle Задайте вопрос!
+				p.about__desc Заполните форму, вписав в неё свой вопрос. В обращении сформулируйте волнующую вас проблему, постарайтесь написать обо всех важных обстоятельствах. Не забудьте также оставить корректные контактные данные.
+
+				form.about__form(action='' method='' autocomplete='off')
+					.about__form-field.about__form-field--input
+						input(type='text' name='name' id='name' required input-js)
+						label.about__form-label(for='name') Имя
+					.about__form-field.about__form-field--input
+						input(type='email' name='email' id='email' required input-js)
+						label.about__form-label(for='email') Email
+					.about__form-field.about__form-field--textarea
+						textarea(name='message' id='message' required input-js)
+						label.about__form-label(for='message') Текст сообщения
+					.about__form-field.about__form-field--button
+						button.about__form-btn(type='submit')
+							span Отправить
+
+// SECTION :: END

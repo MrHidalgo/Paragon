@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
-.main__bg img, .details__block-head img {
+.main__bg img, .details__block-head img, .about__img img {
   position: absolute;
   top: 0;
   left: 0;
@@ -265,7 +265,13 @@ picture {
   line-height: 1;
 }
 
-/* line 4, src/scss/_macros/_logotype.scss */
+/* line 3, src/scss/_macros/_logotype.scss */
+.logo {
+  position: relative;
+  top: -1px;
+}
+
+/* line 7, src/scss/_macros/_logotype.scss */
 .logo__btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -277,7 +283,7 @@ picture {
           align-items: flex-start;
 }
 
-/* line 9, src/scss/_macros/_logotype.scss */
+/* line 12, src/scss/_macros/_logotype.scss */
 .logo__img {
   display: block;
   max-width: 139px;
@@ -292,10 +298,28 @@ picture {
   top: 0;
   left: 0;
   width: 100%;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0);
   background-color: #ede9e0;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 11, src/scss/_components/_header.scss */
+/* line 13, src/scss/_components/_header.scss */
+.header.header--fixed {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 18, src/scss/_components/_header.scss */
 .header__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -312,7 +336,7 @@ picture {
   height: 74px;
 }
 
-/* line 17, src/scss/_components/_header.scss */
+/* line 24, src/scss/_components/_header.scss */
 .header__wrapper-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -328,7 +352,7 @@ picture {
           justify-content: flex-end;
 }
 
-/* line 24, src/scss/_components/_header.scss */
+/* line 31, src/scss/_components/_header.scss */
 .header__nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -341,7 +365,7 @@ picture {
   padding-right: 60px;
 }
 
-/* line 29, src/scss/_components/_header.scss */
+/* line 36, src/scss/_components/_header.scss */
 .header__nav-link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -366,7 +390,7 @@ picture {
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-/* line 41, src/scss/_components/_header.scss */
+/* line 48, src/scss/_components/_header.scss */
 .header__nav-link.is-active, .header__nav-link:hover {
   color: #967d60;
   background-color: #ffffff;
@@ -375,7 +399,7 @@ picture {
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-/* line 50, src/scss/_components/_header.scss */
+/* line 57, src/scss/_components/_header.scss */
 .header__action {
   display: -webkit-box;
   display: -webkit-flex;
@@ -387,7 +411,7 @@ picture {
           align-items: center;
 }
 
-/* line 54, src/scss/_components/_header.scss */
+/* line 61, src/scss/_components/_header.scss */
 .header__action-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -403,7 +427,7 @@ picture {
           justify-content: center;
 }
 
-/* line 60, src/scss/_components/_header.scss */
+/* line 67, src/scss/_components/_header.scss */
 .header__action-btn:hover .icon-font {
   color: #967d60;
   -webkit-transition: color 0.3s ease-in-out;
@@ -411,18 +435,23 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 66, src/scss/_components/_header.scss */
+/* line 73, src/scss/_components/_header.scss */
 .header__action-btn:not(:last-of-type) {
   margin-right: 23px;
 }
 
-/* line 70, src/scss/_components/_header.scss */
+/* line 77, src/scss/_components/_header.scss */
 .header__action-btn .icon-font {
   color: #382713;
   font-size: 18px;
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
+}
+
+/* line 82, src/scss/_components/_header.scss */
+.header__action-btn .icon-font.icon-mail {
+  font-size: 20px;
 }
 
 /* line 3, src/scss/_components/_footer.scss */
@@ -862,6 +891,276 @@ picture {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
+}
+
+/* line 3, src/scss/_components/about/_about.scss */
+.about {
+  padding-top: 55px;
+  padding-bottom: 112px;
+}
+
+/* line 7, src/scss/_components/about/_about.scss */
+.about__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 11, src/scss/_components/about/_about.scss */
+.about__wrapper-left {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-right: 74px;
+}
+
+/* line 18, src/scss/_components/about/_about.scss */
+.about__wrapper-right {
+  width: 100%;
+  max-width: 351px;
+}
+
+/* line 23, src/scss/_components/about/_about.scss */
+.about__wrapper-right {
+  padding-top: 93px;
+}
+
+/* line 28, src/scss/_components/about/_about.scss */
+.about__title {
+  padding-bottom: 42px;
+  color: #00000b;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 36px;
+}
+
+/* line 35, src/scss/_components/about/_about.scss */
+.about__subtitle {
+  padding-bottom: 17px;
+  color: #00000b;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 28px;
+}
+
+/* line 42, src/scss/_components/about/_about.scss */
+.about__desc {
+  padding-bottom: 42px;
+  color: #252525;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.467;
+}
+
+/* line 50, src/scss/_components/about/_about.scss */
+.about__line {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 38px;
+  background-color: #d0cece;
+}
+
+/* line 57, src/scss/_components/about/_about.scss */
+.about__line:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #412d12;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* line 70, src/scss/_components/about/_about.scss */
+.about__details img {
+  float: left;
+  width: 220px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+/* line 77, src/scss/_components/about/_about.scss */
+.about__details-text {
+  display: inline;
+}
+
+/* line 80, src/scss/_components/about/_about.scss */
+.about__details-text p {
+  padding-bottom: 20px;
+  color: #252525;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+/* line 86, src/scss/_components/about/_about.scss */
+.about__details-text p strong {
+  font-weight: 400;
+}
+
+/* line 93, src/scss/_components/about/_about.scss */
+.about__img {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 344px;
+  margin-bottom: 24px;
+}
+
+/* line 105, src/scss/_components/about/_about.scss */
+.about__desc {
+  padding-bottom: 29px;
+  font-weight: 300;
+  font-size: 17px;
+  color: #252525;
+}
+
+/* line 112, src/scss/_components/about/_about.scss */
+.about__form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Merriweather', sans-serif;
+}
+
+/* line 117, src/scss/_components/about/_about.scss */
+.about__form-field {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* line 122, src/scss/_components/about/_about.scss */
+.about__form-field.is-focus input,
+.about__form-field.is-focus textarea {
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 128, src/scss/_components/about/_about.scss */
+.about__form-field.is-focus .about__form-label {
+  -webkit-transform: scale(0.7) translateY(-40%);
+      -ms-transform: scale(0.7) translateY(-40%);
+          transform: scale(0.7) translateY(-40%);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 134, src/scss/_components/about/_about.scss */
+.about__form-field input,
+.about__form-field textarea {
+  outline: none;
+  position: relative;
+  width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d0cece;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  background-color: #ede9e0;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 147, src/scss/_components/about/_about.scss */
+.about__form-field input:focus,
+.about__form-field textarea:focus {
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 153, src/scss/_components/about/_about.scss */
+.about__form-field input {
+  height: 56px;
+  padding: 0 20px;
+}
+
+/* line 158, src/scss/_components/about/_about.scss */
+.about__form-field textarea {
+  resize: none;
+  height: 104px;
+  padding: 20px;
+}
+
+/* line 165, src/scss/_components/about/_about.scss */
+.about__form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  padding: 0 20px;
+  line-height: 56px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #827a70;
+  -webkit-transform-origin: 20px center;
+      -ms-transform-origin: 20px center;
+          transform-origin: 20px center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 181, src/scss/_components/about/_about.scss */
+.about__form-btn {
+  outline: none;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 52px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #412d12;
+}
+
+/* line 196, src/scss/_components/about/_about.scss */
+.about__form-btn span {
+  font-size: 22px;
+  color: white;
+  line-height: 1.545;
 }
 
 /*# sourceMappingURL=maps/app.css.map */
