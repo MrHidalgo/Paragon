@@ -3,6 +3,9 @@
 .details {
 	padding-top: 60px;
 	padding-bottom: 50px;
+	@include adaptive(767) {
+		padding-top: 20px;
+	}
 
 	&__block {
 		display: flex;
@@ -35,6 +38,10 @@
 				width: 100%;
 				max-width: calc((100% - 20px) / 2);
 				padding-bottom: 33px;
+				@include adaptive(767) {
+					max-width: 100%;
+					padding-bottom: 30px;
+				}
 			}
 		}
 
@@ -42,6 +49,12 @@
 			overflow: hidden;
 			position: relative;
 			height: 344px;
+			@include adaptive(1024) {
+				height: 275px;
+			}
+			@include adaptive(767) {
+				height: 211px;
+			}
 
 			img {
 				@extend %imageResCoverAbs;
@@ -53,6 +66,9 @@
 
 		&-body {
 			padding-top: 23px;
+			@include adaptive(767) {
+				padding-top: 15px;
+			}
 		}
 
 		&-date {
@@ -60,6 +76,10 @@
 			font-weight: 300;
 			font-size: 13px;
 			color: #827a70;
+			line-height: 1;
+			@include adaptive(767) {
+				padding-bottom: 10px;
+			}
 		}
 
 		&-title {
@@ -68,6 +88,12 @@
 			font-size: 28px;
 			font-weight: 300;
 			font-family: "Merriweather", sans-serif;
+			@include adaptive(1365) {
+				font-size: 24px;
+			}
+			@include adaptive(767) {
+				font-size: 20px;
+			}
 		}
 
 		&-desc {
@@ -107,6 +133,9 @@
 			align-items: center;
 			width: 100%;
 			max-width: 250px;
+			@include adaptive(767) {
+				max-width: 85px;
+			}
 		}
 
 		&-middle {
@@ -161,6 +190,12 @@
 			&--last,
 			&--next,
 			&--prev {
+				@include adaptive(767) {
+					span {
+						display: none;
+					}
+				}
+
 				.icon-font {
 					color: #00000b;
 					font-size: 12px;

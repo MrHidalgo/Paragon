@@ -8,10 +8,17 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		height: 73px;
+		@include adaptive(767) {
+			height: 60px;
+		}
 
 		&-left,
 		&-right {
 			width: 150px;
+			@include adaptive(767) {
+				display: none !important;
+			}
 		}
 
 		&-middle {
@@ -25,6 +32,24 @@
 		&-right {
 			display: flex;
 			justify-content: flex-end;
+		}
+	}
+
+	&__copyright {
+		position: relative;
+		left: -10px;
+		display: none;
+		width: calc(100% + 20px);
+		padding-top: 2px;
+		padding-bottom: 2px;
+		background-color: #ffffff;
+		@include adaptive(767) {
+			display: flex;
+		}
+
+		.copyright {
+			width: 100%;
+			text-align: center;
 		}
 	}
 }

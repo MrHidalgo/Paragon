@@ -3,25 +3,53 @@
 .about {
 	padding-top: 55px;
 	padding-bottom: 112px;
+	@include adaptive(1023) {
+		padding-bottom: 92px;
+	}
+	@include adaptive(767) {
+		padding-top: 30px;
+		padding-bottom: 50px;
+	}
 
 	&__wrapper {
 		display: flex;
 		align-items: flex-start;
+		@include adaptive(1023) {
+			flex-wrap: wrap;
+		}
 
 		&-left {
 			flex: 1;
 			min-width: 1px;
 			max-width: 100%;
 			padding-right: 74px;
+			@include adaptive(1365) {
+				padding-right: 54px;
+			}
+			@include adaptive(1279) {
+				padding-right: 34px;
+			}
+			@include adaptive(1023) {
+				padding-right: 0;
+			}
 		}
 
 		&-right {
 			width: 100%;
 			max-width: 351px;
+			@include adaptive(1023) {
+				max-width: 100%;
+			}
 		}
 
 		&-right {
 			padding-top: 93px;
+			@include adaptive(1279) {
+				padding-top: 50px;
+			}
+			@include adaptive(1023) {
+				padding-top: 30px;
+			}
 		}
 	}
 
@@ -30,6 +58,13 @@
 		color: #00000b;
 		font-family: 'Merriweather', sans-serif;
 		font-size: 36px;
+		@include adaptive(1365) {
+			font-size: 33px;
+		}
+		@include adaptive(767) {
+			padding-bottom: 40px;
+			font-size: 28px;
+		}
 	}
 
 	&__subtitle {
@@ -37,6 +72,12 @@
 		color: #00000b;
 		font-family: 'Merriweather', sans-serif;
 		font-size: 28px;
+		@include adaptive(1023) {
+			font-size: 26px;
+		}
+		@include adaptive(767) {
+			font-size: 20px;
+		}
 	}
 
 	&__desc {
@@ -44,7 +85,7 @@
 		color: #252525;
 		font-size: 15px;
 		font-weight: 300;
-		line-height: 1.467;
+		line-height: 1.6;
 	}
 
 	&__line {
@@ -72,16 +113,33 @@
 			width: 220px;
 			margin-right: 30px;
 			margin-bottom: 30px;
+			@include adaptive(1279) {
+				width: 190px;
+				margin-bottom: 20px;
+			}
+			@include adaptive(767) {
+				float: none;
+				display: block;
+				max-width: 220px;
+				margin-left: auto;
+				margin-right: auto;
+				height: auto;
+				max-height: 100%;
+			}
 		}
 
 		&-text {
 			display: inline;
+			@include adaptive(767) {
+				display: block;
+			}
 
 			p {
 				padding-bottom: 20px;
 				color: #252525;
 				font-weight: 300;
 				font-size: 17px;
+				line-height: 1.6;
 
 				strong {
 					font-weight: 400;
@@ -96,6 +154,9 @@
 		width: 100%;
 		height: 344px;
 		margin-bottom: 24px;
+		@include adaptive(767) {
+			height: 211px;
+		}
 
 		img {
 			@extend %imageResCoverAbs;
@@ -153,12 +214,18 @@
 			input {
 				height: 56px;
 				padding: 0 20px;
+				@include adaptive(767) {
+					height: 46px;
+				}
 			}
 
 			textarea {
 				resize: none;
 				height: 104px;
 				padding: 20px;
+				@include adaptive(767) {
+					height: 100px;
+				}
 			}
 		}
 
@@ -176,6 +243,9 @@
 			transform-origin: 20px center;
 			backface-visibility: hidden;
 			@include transition(transform);
+			@include adaptive(767) {
+				height: 52px;
+			}
 		}
 
 		&-btn {
@@ -190,13 +260,23 @@
 			border: none;
 			box-shadow: none;
 			background-color: rgb(65, 45, 18);
+			@include transition(background-color);
 
-			&:hover {}
+			&:hover {
+				background-color: #00000b;
+				@include transition(background-color);
+			}
 
 			span {
 				font-size: 22px;
 				color: rgb(255, 255, 255);
 				line-height: 1.545;
+				@include adaptive(1023) {
+					font-size: 20px;
+				}
+				@include adaptive(767) {
+					font-size: 18px;
+				}
 			}
 		}
 	}

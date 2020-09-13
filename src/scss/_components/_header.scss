@@ -9,6 +9,9 @@
 	box-shadow: 0 2px 5px 0 rgba(#000, 0);
 	background-color: #ede9e0;
 	@include transition(box-shadow);
+	@include adaptive(767) {
+		top: 0 !important;
+	}
 
 	&.header--fixed {
 		box-shadow: 0 2px 5px 0 rgba(#000, 0.05);
@@ -20,11 +23,62 @@
 		align-items: center;
 		justify-content: space-between;
 		height: 74px;
+		@include adaptive(767) {
+			height: 60px;
+		}
+
+		&-left {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@include adaptive(767) {
+				width: 100%;
+			}
+
+			> div {
+				&:nth-of-type(2) {
+					display: none;
+					@include adaptive(767) {
+						display: flex;
+						align-items: center;
+						justify-content: flex-end;
+					}
+				}
+			}
+		}
 
 		&-right {
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
+			@include adaptive(767) {
+				z-index: 1199;
+				opacity: 0;
+				visibility: hidden;
+				overflow-y: auto;
+				position: fixed;
+				top: 60px;
+				left: 0;
+				flex-direction: column;
+				justify-content: flex-start;
+				width: 100%;
+				height: 0;
+				padding-top: 40px;
+				padding-bottom: 40px;
+				border-top: 1px solid #d0cece;
+				background-color: #ede9e0;
+
+				&.is-animated {
+					@include transition(opacity, visibility, height);
+				}
+
+				&.is-open {
+					opacity: 1;
+					visibility: visible;
+					height: calc(100% - 60px);
+					@include transition(opacity, visibility, height);
+				}
+			}
 		}
 	}
 
@@ -32,6 +86,12 @@
 		display: flex;
 		align-items: center;
 		padding-right: 60px;
+		@include adaptive(767) {
+			flex-direction: column;
+			width: 100%;
+			padding-right: 0;
+			padding-bottom: 20px;
+		}
 
 		&-link {
 			display: flex;
@@ -44,6 +104,11 @@
 			font-family: 'Roboto', sans-serif;
 			text-transform: uppercase;
 			@include transition(color, background-color);
+			@include adaptive(767) {
+				width: 100%;
+				height: 52px;
+				font-size: 22px;
+			}
 
 			&.is-active,
 			&:hover {
@@ -82,6 +147,39 @@
 				&.icon-mail {
 					font-size: 20px;
 				}
+			}
+		}
+	}
+
+	&__search {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 27px;
+
+		.icon-font {
+			color: #00000b;
+			font-size: 24px;
+		}
+	}
+
+	&__copyright {
+		display: none;
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		width: 100%;
+		@include adaptive(767) {
+			display: flex;
+		}
+
+		.copyright {
+			width: 100%;
+			text-align: center;
+
+			&__text {
+				font-size: 11px;
+				color: #666666;
 			}
 		}
 	}

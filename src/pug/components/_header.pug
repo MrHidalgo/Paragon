@@ -5,11 +5,19 @@ header#header.header
 		.header__wrapper
 			.header__wrapper-left
 
-				.logo.logo--header
-					a.logo__btn(href="/")
-						img.logo__img(src="img/logo.svg" alt="")
+				div
 
-			.header__wrapper-right
+					.logo.logo--header
+						a.logo__btn(href="/")
+							img.logo__img(src="img/logo.svg" alt="")
+
+				div
+					a.header__search(href="#")
+						i.icon-font.icon-search
+
+					+hamburger()
+
+			.header__wrapper-right(mobile-block-js)
 
 				nav.header__nav
 					a.header__nav-link(href="/blog.html" class!= (pageClassName === 'p-blog')?'is-active':'') Блог
@@ -20,5 +28,9 @@ header#header.header
 						i.icon-font.icon-search
 					a.header__action-btn(href="#")
 						i.icon-font.icon-instagram
+
+				.header__copyright
+					.copyright
+						p.copyright__text © 2020 Paragoneso.com
 
 // HEADER :: END

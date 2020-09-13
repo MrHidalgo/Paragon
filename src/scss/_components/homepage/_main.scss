@@ -29,6 +29,12 @@
 		align-items: center;
 		justify-content: center;
 		height: 600px;
+		@include adaptive(1365) {
+			height: 550px;
+		}
+		@include adaptive(1024) {
+			height: 508px;
+		}
 	}
 
 	&__title {
@@ -36,7 +42,12 @@
 		font-size: 48px;
 		font-family: "Merriweather", sans-serif;
 		color: rgb(255, 255, 255);
-		line-height: 0.5;
+		@include adaptive(1365) {
+			font-size: 42px;
+		}
+		@include adaptive(767) {
+			font-size: 30px;
+		}
 	}
 }
 

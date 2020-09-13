@@ -16,6 +16,42 @@
 * */
 
 /**
+ * @name initHamburger
+ *
+ * @description Init hamburger logic with animated
+ */
+var initHamburger = function initHamburger() {
+
+	var btn = document.querySelector("[hamburger-js]"),
+	    hideScrollContainer = document.querySelectorAll("html, body"),
+	    mobileContainer = document.querySelector("[mobile-block-js]");
+
+	/**
+   * @description
+  */
+	btn.addEventListener("click", function (ev) {
+		var elem = ev.currentTarget;
+
+		elem.classList.toggle("is-active");
+
+		if (mobileContainer.classList.contains('is-open')) {
+			mobileContainer.classList.remove("is-open");
+			mobileContainer.classList.add("is-animated");
+
+			setTimeout(function () {
+				mobileContainer.classList.remove("is-animated");
+			}, 300);
+		} else {
+			mobileContainer.classList.add("is-open");
+		}
+
+		hideScrollContainer.forEach(function (val, idx) {
+			val.classList.toggle("is-hideScroll");
+		});
+	});
+};
+
+/**
  * @name initHeaderFixed
  *
  * @description Fixing the site header in the scrolling page.
@@ -182,6 +218,7 @@ window.addEventListener('scroll', function (ev) {
 		// ==========================================
 
 		// lib
+		initHamburger();
 		// ==========================================
 
 		// callback

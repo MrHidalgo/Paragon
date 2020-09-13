@@ -17,13 +17,22 @@ const initHamburger = () => {
 	btn.addEventListener("click", (ev) => {
     const elem = ev.currentTarget;
 
-    elem.classList.toggle("is-active");
-    mobileContainer.classList.toggle("is-open");
+		elem.classList.toggle("is-active");
+
+    if(mobileContainer.classList.contains('is-open')) {
+			mobileContainer.classList.remove("is-open");
+			mobileContainer.classList.add("is-animated");
+
+			setTimeout(() => {
+				mobileContainer.classList.remove("is-animated");
+			}, 300);
+		} else {
+			mobileContainer.classList.add("is-open");
+		}
 
     hideScrollContainer.forEach((val, idx) => {
       val.classList.toggle("is-hideScroll");
     });
-
   });
 
 };
