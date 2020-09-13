@@ -8,4 +8,23 @@
 	}
 }
 
+.social {
+	display: flex;
+	align-items: center;
+
+	a {
+		display: flex;
+		margin-left: 5px;
+		margin-right: 5px;
+		font-size: 34px;
+		color: #ede9e0;
+		@include transition(color);
+
+		&:hover {
+			color: #00000b;
+			@include transition(color);
+		}
+	}
+}
+
 // COMMON :: END

@@ -30,14 +30,23 @@
 	@if $filename == corner {
 		$char: "\E001";
 	}
-	@if $filename == instagram {
+	@if $filename == facebook {
 		$char: "\E002";
 	}
-	@if $filename == mail {
+	@if $filename == instagram {
 		$char: "\E003";
 	}
-	@if $filename == search {
+	@if $filename == mail {
 		$char: "\E004";
+	}
+	@if $filename == quotes {
+		$char: "\E005";
+	}
+	@if $filename == search {
+		$char: "\E006";
+	}
+	@if $filename == twitter {
+		$char: "\E007";
 	}
 
 	@return $char;
@@ -58,6 +67,10 @@
 	@include icon(corner);
 
 }
+.icon-facebook {
+	@include icon(facebook);
+
+}
 .icon-instagram {
 	@include icon(instagram);
 
@@ -66,7 +79,15 @@
 	@include icon(mail);
 
 }
+.icon-quotes {
+	@include icon(quotes);
+
+}
 .icon-search {
 	@include icon(search);
+
+}
+.icon-twitter {
+	@include icon(twitter);
 
 }

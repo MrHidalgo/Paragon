@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
-.main__bg img, .details__block-head img, .about__img img {
+.main__bg img, .details__block-head img, .about__img img, .blog__img img, .blog__video iframe,
+.blog__video video {
   position: absolute;
   top: 0;
   left: 0;
@@ -19,7 +20,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-corner:before, .icon-instagram:before, .icon-mail:before, .icon-search:before {
+.icon-corner:before, .icon-facebook:before, .icon-instagram:before, .icon-mail:before, .icon-quotes:before, .icon-search:before, .icon-twitter:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,24 +31,39 @@
   text-transform: none;
 }
 
-/* line 47, src/scss/_generated/_spriteFont.scss */
+/* line 56, src/scss/_generated/_spriteFont.scss */
 .icon-corner:before {
   content: "";
 }
 
-/* line 47, src/scss/_generated/_spriteFont.scss */
-.icon-instagram:before {
+/* line 56, src/scss/_generated/_spriteFont.scss */
+.icon-facebook:before {
   content: "";
 }
 
-/* line 47, src/scss/_generated/_spriteFont.scss */
-.icon-mail:before {
+/* line 56, src/scss/_generated/_spriteFont.scss */
+.icon-instagram:before {
   content: "";
 }
 
-/* line 47, src/scss/_generated/_spriteFont.scss */
-.icon-search:before {
+/* line 56, src/scss/_generated/_spriteFont.scss */
+.icon-mail:before {
   content: "";
+}
+
+/* line 56, src/scss/_generated/_spriteFont.scss */
+.icon-quotes:before {
+  content: "";
+}
+
+/* line 56, src/scss/_generated/_spriteFont.scss */
+.icon-search:before {
+  content: "";
+}
+
+/* line 56, src/scss/_generated/_spriteFont.scss */
+.icon-twitter:before {
+  content: "";
 }
 
 /* line 1, src/scss/_shared/_main-setting-reset.scss */
@@ -254,6 +270,41 @@ picture {
   font-size: 13px;
   font-weight: 300;
   color: #827a70;
+}
+
+/* line 11, src/scss/_shared/_common.scss */
+.social {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 15, src/scss/_shared/_common.scss */
+.social a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 34px;
+  color: #ede9e0;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 23, src/scss/_shared/_common.scss */
+.social a:hover {
+  color: #00000b;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 /* line 1, src/scss/_shared/_iconFont.scss */
@@ -1161,6 +1212,223 @@ picture {
   font-size: 22px;
   color: white;
   line-height: 1.545;
+}
+
+/* line 3, src/scss/_components/blog/_blog.scss */
+.blog {
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+/* line 7, src/scss/_components/blog/_blog.scss */
+.blog__back {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 26px;
+}
+
+/* line 12, src/scss/_components/blog/_blog.scss */
+.blog__back .icon-font {
+  color: #00000b;
+  margin-right: 5px;
+  -webkit-transform: scale(-1);
+      -ms-transform: scale(-1);
+          transform: scale(-1);
+  font-size: 12px;
+}
+
+/* line 19, src/scss/_components/blog/_blog.scss */
+.blog__back span {
+  color: #00000b;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* line 27, src/scss/_components/blog/_blog.scss */
+.blog__img {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 344px;
+  margin-bottom: 40px;
+}
+
+/* line 39, src/scss/_components/blog/_blog.scss */
+.blog__title {
+  padding-bottom: 22px;
+  font-weight: 300;
+  font-size: 36px;
+  font-family: 'Merriweather', sans-serif;
+  color: #00000b;
+}
+
+/* line 47, src/scss/_components/blog/_blog.scss */
+.blog__date {
+  padding-bottom: 30px;
+  font-weight: 300;
+  font-size: 15px;
+  color: #827a70;
+}
+
+/* line 55, src/scss/_components/blog/_blog.scss */
+.blog__desc p {
+  padding-bottom: 20px;
+  font-weight: 300;
+  font-size: 17px;
+  color: #252525;
+  line-height: 1.6;
+}
+
+/* line 64, src/scss/_components/blog/_blog.scss */
+.blog__quote {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+/* line 71, src/scss/_components/blog/_blog.scss */
+.blog__quote > div:nth-of-type(1) {
+  width: 84px;
+}
+
+/* line 74, src/scss/_components/blog/_blog.scss */
+.blog__quote > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 81, src/scss/_components/blog/_blog.scss */
+.blog__quote .icon-font {
+  font-size: 46px;
+  color: #ede9e0;
+}
+
+/* line 86, src/scss/_components/blog/_blog.scss */
+.blog__quote p {
+  line-height: 1.6;
+  font-size: 17px;
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: #00000b;
+}
+
+/* line 96, src/scss/_components/blog/_blog.scss */
+.blog__video {
+  overflow: hidden;
+  position: relative;
+  height: 555px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* line 109, src/scss/_components/blog/_blog.scss */
+.blog__divider {
+  width: 100%;
+  height: 1px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: #d0cece;
+}
+
+/* line 117, src/scss/_components/blog/_blog.scss */
+.blog ul,
+.blog ol {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 20px;
+}
+
+/* line 123, src/scss/_components/blog/_blog.scss */
+.blog ul li,
+.blog ol li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 128, src/scss/_components/blog/_blog.scss */
+.blog ul li > div:nth-of-type(1),
+.blog ol li > div:nth-of-type(1) {
+  width: 20px;
+}
+
+/* line 131, src/scss/_components/blog/_blog.scss */
+.blog ul li > div:nth-of-type(2),
+.blog ol li > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 138, src/scss/_components/blog/_blog.scss */
+.blog ul li p,
+.blog ol li p {
+  font-weight: 300;
+  font-size: 17px;
+  color: #252525;
+  line-height: 1.6;
+}
+
+/* line 144, src/scss/_components/blog/_blog.scss */
+.blog ul li p a,
+.blog ol li p a {
+  color: #1155cc;
+}
+
+/* line 153, src/scss/_components/blog/_blog.scss */
+.blog ul li i {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 8px;
+  height: 8px;
+  margin-top: 10px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #252525;
+}
+
+/* line 166, src/scss/_components/blog/_blog.scss */
+.blog ol li i {
+  font-weight: 300;
+  font-size: 17px;
+  color: #252525;
+  line-height: 1.6;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

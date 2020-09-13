@@ -1,0 +1,176 @@
+// SECTION :: START
+
+.blog {
+	padding-top: 40px;
+	padding-bottom: 70px;
+
+	&__back {
+		display: flex;
+		align-items: center;
+		margin-bottom: 26px;
+
+		.icon-font {
+			color: #00000b;
+			margin-right: 5px;
+			transform: scale(-1);
+			font-size: 12px;
+		}
+
+		span {
+			color: #00000b;
+			font-weight: 300;
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+	}
+
+	&__img {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		height: 344px;
+		margin-bottom: 40px;
+
+		img {
+			@extend %imageResCoverAbs;
+		}
+	}
+
+	&__title {
+		padding-bottom: 22px;
+		font-weight: 300;
+		font-size: 36px;
+		font-family: 'Merriweather', sans-serif;
+		color: #00000b;
+	}
+
+	&__date {
+		padding-bottom: 30px;
+		font-weight: 300;
+		font-size: 15px;
+		color: #827a70;
+	}
+
+	&__desc {
+		p {
+			padding-bottom: 20px;
+			font-weight: 300;
+			font-size: 17px;
+			color: #252525;
+			line-height: 1.6;
+		}
+	}
+
+	&__quote {
+		display: flex;
+		align-items: flex-start;
+		padding-top: 20px;
+		padding-bottom: 40px;
+
+		> div {
+			&:nth-of-type(1) {
+				width: 84px;
+			}
+			&:nth-of-type(2) {
+				flex: 1;
+				min-width: 1px;
+				max-width: 100%;
+			}
+		}
+
+		.icon-font {
+			font-size: 46px;
+			color: #ede9e0;
+		}
+
+		p {
+			line-height: 1.6;
+			font-size: 17px;
+			font-family: 'Merriweather', sans-serif;
+			font-weight: 300;
+			font-style: italic;
+			color: #00000b;
+		}
+	}
+
+	&__video {
+		overflow: hidden;
+		position: relative;
+		height: 555px;
+		margin-top: 20px;
+		margin-bottom: 40px;
+
+		iframe,
+		video {
+			@extend %imageResCoverAbs;
+		}
+	}
+
+	&__divider {
+		width: 100%;
+		height: 1px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+		background-color: #d0cece;
+	}
+
+	ul,
+	ol {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 20px;
+
+		li {
+			display: flex;
+			align-items: flex-start;
+
+			> div {
+				&:nth-of-type(1) {
+					width: 20px;
+				}
+				&:nth-of-type(2) {
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+				}
+			}
+
+			p {
+				font-weight: 300;
+				font-size: 17px;
+				color: #252525;
+				line-height: 1.6;
+
+				a {
+					color: #1155cc;
+				}
+			}
+		}
+	}
+
+	ul {
+		li {
+			i {
+				display: flex;
+				width: 8px;
+				height: 8px;
+				margin-top: 10px;
+				border-radius: 50%;
+				background-color: #252525;
+			}
+		}
+	}
+
+	ol {
+		li {
+			i {
+				font-weight: 300;
+				font-size: 17px;
+				color: #252525;
+				line-height: 1.6;
+			}
+		}
+	}
+}
+
+// SECTION :: END
