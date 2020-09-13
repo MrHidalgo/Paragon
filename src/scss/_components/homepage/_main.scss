@@ -1,0 +1,25 @@
+// SECTION :: START
+
+.main {
+	background-image: url('../img/img-main-bg@2x.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 600px;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 48px;
+		font-family: "Merriweather", sans-serif;
+		color: rgb(255, 255, 255);
+		line-height: 0.5;
+	}
+}
+
+// SECTION :: END

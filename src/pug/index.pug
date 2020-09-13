@@ -1,0 +1,13 @@
+---
+title: Paragon
+
+pageClassName: p-home
+---
+extends shared/_layout
+
+block content
+	div.body.body--start(class!= pageClassName)
+
+		include components/homepage/_main
+		include components/homepage/_details
+

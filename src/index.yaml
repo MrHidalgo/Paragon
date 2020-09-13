@@ -1,0 +1,12 @@
+ProjectTitle: Paragon
+
+PageList:
+- file: index.html
+  titleName: Home
+  ready: 1
+- file: abouts.html
+  titleName: Abouts
+  ready: 1
+- file: blog.html
+  titleName: Blog
+  ready: 1

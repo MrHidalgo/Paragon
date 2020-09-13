@@ -1,0 +1,27 @@
+// FOOTER :: START
+
+.footer {
+	border: 1px solid #d0cece;
+	background-color: #ede9e0;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-left,
+		&-right {
+			width: 150px;
+		}
+
+		&-middle {
+			display: flex;
+			justify-content: center;
+			flex: 1;
+			min-width: 1px;
+			max-width: 100%;
+		}
+	}
+}
+
+// FOOTER :: END
