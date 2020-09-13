@@ -7,8 +7,7 @@
     "start": "gulp",
     "build": "gulp build",
     "clean": "gulp clean",
-    "deploy-dev": "gulp build --dev && surge --project ./dest --domain https://paragon-dev.surge.sh",
-    "deploy-prod": "gulp production --prod && surge --project ./dest --domain https://paragon-dev.surge.sh"
+    "deploy-dev": "gulp build --dev && surge --project ./dest --domain https://paragon-dev.surge.sh"
   },
   "author": "Andrii Kovalenko <hkovalenko9@gmail.com>",
   "license": "ISC",

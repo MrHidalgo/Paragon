@@ -137,12 +137,22 @@
 				margin-right: 2px;
 				border-radius: 50%;
 				background-color: transparent;
+				@include transition(background-color);
+
+				&:hover {
+					span {
+						color: #8e7657;
+						@include transition(color);
+					}
+				}
 
 				&.is-active {
 					background-color: #ede8e0;
+					@include transition(background-color);
 
 					span {
 						color: #8e7657;
+						@include transition(color);
 					}
 				}
 			}
@@ -157,9 +167,10 @@
 				}
 
 				&.is-disabled {
+					pointer-events: none;
+
 					span,
 					.icon-font {
-						pointer-events: none;
 						color: #827a70;
 					}
 				}
@@ -211,6 +222,7 @@
 				font-weight: 300;
 				font-size: 14px;
 				text-transform: uppercase;
+				@include transition(color);
 			}
 		}
 	}

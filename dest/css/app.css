@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
-.details__block-head img {
+.main__bg img, .details__block-head img {
   position: absolute;
   top: 0;
   left: 0;
@@ -470,8 +470,21 @@ picture {
   max-width: 100%;
 }
 
+/* line 25, src/scss/_components/_footer.scss */
+.footer__wrapper-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 /* line 3, src/scss/_components/homepage/_main.scss */
 .main {
+  position: relative;
   background-image: url("../img/img-main-bg@2x.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -479,8 +492,26 @@ picture {
           background-size: cover;
 }
 
-/* line 9, src/scss/_components/homepage/_main.scss */
+/* line 10, src/scss/_components/homepage/_main.scss */
+.main__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+/* line 19, src/scss/_components/homepage/_main.scss */
+.main__bg img {
+  opacity: 0.95;
+}
+
+/* line 25, src/scss/_components/homepage/_main.scss */
 .main__wrapper {
+  z-index: 2;
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -496,7 +527,7 @@ picture {
   height: 600px;
 }
 
-/* line 16, src/scss/_components/homepage/_main.scss */
+/* line 34, src/scss/_components/homepage/_main.scss */
 .main__title {
   text-align: center;
   font-size: 48px;
@@ -734,79 +765,103 @@ picture {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   background-color: transparent;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
-/* line 141, src/scss/_components/homepage/_details.scss */
+/* line 143, src/scss/_components/homepage/_details.scss */
+.details__pagination-btn--num:hover span {
+  color: #8e7657;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 149, src/scss/_components/homepage/_details.scss */
 .details__pagination-btn--num.is-active {
   background-color: #ede8e0;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
-/* line 144, src/scss/_components/homepage/_details.scss */
+/* line 153, src/scss/_components/homepage/_details.scss */
 .details__pagination-btn--num.is-active span {
   color: #8e7657;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
-/* line 154, src/scss/_components/homepage/_details.scss */
+/* line 164, src/scss/_components/homepage/_details.scss */
 .details__pagination-btn--first .icon-font, .details__pagination-btn--last .icon-font, .details__pagination-btn--next .icon-font, .details__pagination-btn--prev .icon-font {
   color: #00000b;
   font-size: 12px;
 }
 
-/* line 160, src/scss/_components/homepage/_details.scss */
+/* line 169, src/scss/_components/homepage/_details.scss */
+.details__pagination-btn--first.is-disabled, .details__pagination-btn--last.is-disabled, .details__pagination-btn--next.is-disabled, .details__pagination-btn--prev.is-disabled {
+  pointer-events: none;
+}
+
+/* line 172, src/scss/_components/homepage/_details.scss */
 .details__pagination-btn--first.is-disabled span,
 .details__pagination-btn--first.is-disabled .icon-font, .details__pagination-btn--last.is-disabled span,
 .details__pagination-btn--last.is-disabled .icon-font, .details__pagination-btn--next.is-disabled span,
 .details__pagination-btn--next.is-disabled .icon-font, .details__pagination-btn--prev.is-disabled span,
 .details__pagination-btn--prev.is-disabled .icon-font {
-  pointer-events: none;
   color: #827a70;
 }
 
-/* line 170, src/scss/_components/homepage/_details.scss */
+/* line 181, src/scss/_components/homepage/_details.scss */
 .details__pagination-btn--first .icon-font, .details__pagination-btn--prev .icon-font {
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-/* line 175, src/scss/_components/homepage/_details.scss */
+/* line 186, src/scss/_components/homepage/_details.scss */
 .details__pagination-btn--first {
   margin-right: 20px;
 }
 
-/* line 179, src/scss/_components/homepage/_details.scss */
+/* line 190, src/scss/_components/homepage/_details.scss */
 .details__pagination-btn--first .icon-font:nth-of-type(2) {
   position: relative;
   left: -7px;
 }
 
-/* line 186, src/scss/_components/homepage/_details.scss */
+/* line 197, src/scss/_components/homepage/_details.scss */
 .details__pagination-btn--last {
   margin-left: 20px;
 }
 
-/* line 190, src/scss/_components/homepage/_details.scss */
+/* line 201, src/scss/_components/homepage/_details.scss */
 .details__pagination-btn--last .icon-font:nth-of-type(1) {
   position: relative;
   right: -7px;
 }
 
-/* line 198, src/scss/_components/homepage/_details.scss */
+/* line 209, src/scss/_components/homepage/_details.scss */
 .details__pagination-btn--next .icon-font {
   margin-left: 5px;
 }
 
-/* line 204, src/scss/_components/homepage/_details.scss */
+/* line 215, src/scss/_components/homepage/_details.scss */
 .details__pagination-btn--prev .icon-font {
   margin-right: 5px;
 }
 
-/* line 209, src/scss/_components/homepage/_details.scss */
+/* line 220, src/scss/_components/homepage/_details.scss */
 .details__pagination-btn span {
   color: #00000b;
   font-weight: 300;
   font-size: 14px;
   text-transform: uppercase;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

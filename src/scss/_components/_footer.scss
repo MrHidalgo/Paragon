@@ -21,6 +21,11 @@
 			min-width: 1px;
 			max-width: 100%;
 		}
+
+		&-right {
+			display: flex;
+			justify-content: flex-end;
+		}
 	}
 }
 
