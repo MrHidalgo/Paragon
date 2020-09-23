@@ -61,6 +61,17 @@
 		}
 	}
 
+	&__subtitle {
+		padding-bottom: 16px;
+		font-weight: 300;
+		font-size: 26px;
+		font-family: 'Merriweather', sans-serif;
+		color: #00000b;
+		@include adaptive(767) {
+			font-size: 23px;
+		}
+	}
+
 	&__date {
 		padding-bottom: 30px;
 		font-weight: 300;
@@ -80,6 +91,10 @@
 			line-height: 1.6;
 			@include adaptive(767) {
 				font-size: 15px;
+			}
+
+			strong {
+				font-weight: 500;
 			}
 		}
 	}
@@ -129,7 +144,7 @@
 		}
 	}
 
-	&__video {
+	&__media {
 		overflow: hidden;
 		position: relative;
 		height: 555px;
@@ -143,6 +158,7 @@
 		}
 
 		iframe,
+		img,
 		video {
 			@extend %imageResCoverAbs;
 		}

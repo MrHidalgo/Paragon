@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
-.main__bg img, .details__block-head img, .about__img img, .blog__img img, .blog__video iframe,
-.blog__video video {
+.main__bg img, .details__block-head img, .about__img img, .blog__img img, .blog__media iframe,
+.blog__media img,
+.blog__media video {
   position: absolute;
   top: 0;
   left: 0;
@@ -1979,6 +1980,22 @@ picture {
 }
 
 /* line 64, src/scss/_components/blog/_blog.scss */
+.blog__subtitle {
+  padding-bottom: 16px;
+  font-weight: 300;
+  font-size: 26px;
+  font-family: 'Merriweather', sans-serif;
+  color: #00000b;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 64, src/scss/_components/blog/_blog.scss */
+  .blog__subtitle {
+    font-size: 23px;
+  }
+}
+
+/* line 75, src/scss/_components/blog/_blog.scss */
 .blog__date {
   padding-bottom: 30px;
   font-weight: 300;
@@ -1987,13 +2004,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 64, src/scss/_components/blog/_blog.scss */
+  /* line 75, src/scss/_components/blog/_blog.scss */
   .blog__date {
     padding-bottom: 20px;
   }
 }
 
-/* line 75, src/scss/_components/blog/_blog.scss */
+/* line 86, src/scss/_components/blog/_blog.scss */
 .blog__desc p {
   padding-bottom: 20px;
   font-weight: 300;
@@ -2003,13 +2020,18 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 75, src/scss/_components/blog/_blog.scss */
+  /* line 86, src/scss/_components/blog/_blog.scss */
   .blog__desc p {
     font-size: 15px;
   }
 }
 
-/* line 87, src/scss/_components/blog/_blog.scss */
+/* line 96, src/scss/_components/blog/_blog.scss */
+.blog__desc p strong {
+  font-weight: 500;
+}
+
+/* line 102, src/scss/_components/blog/_blog.scss */
 .blog__quote {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2024,7 +2046,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 87, src/scss/_components/blog/_blog.scss */
+  /* line 102, src/scss/_components/blog/_blog.scss */
   .blog__quote {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -2032,20 +2054,20 @@ picture {
   }
 }
 
-/* line 97, src/scss/_components/blog/_blog.scss */
+/* line 112, src/scss/_components/blog/_blog.scss */
 .blog__quote > div:nth-of-type(1) {
   width: 84px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 97, src/scss/_components/blog/_blog.scss */
+  /* line 112, src/scss/_components/blog/_blog.scss */
   .blog__quote > div:nth-of-type(1) {
     width: 100%;
     padding-bottom: 10px;
   }
 }
 
-/* line 104, src/scss/_components/blog/_blog.scss */
+/* line 119, src/scss/_components/blog/_blog.scss */
 .blog__quote > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2055,20 +2077,20 @@ picture {
   max-width: 100%;
 }
 
-/* line 111, src/scss/_components/blog/_blog.scss */
+/* line 126, src/scss/_components/blog/_blog.scss */
 .blog__quote .icon-font {
   font-size: 46px;
   color: #ede9e0;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 111, src/scss/_components/blog/_blog.scss */
+  /* line 126, src/scss/_components/blog/_blog.scss */
   .blog__quote .icon-font {
     font-size: 23px;
   }
 }
 
-/* line 119, src/scss/_components/blog/_blog.scss */
+/* line 134, src/scss/_components/blog/_blog.scss */
 .blog__quote p {
   line-height: 1.6;
   font-size: 17px;
@@ -2079,14 +2101,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 119, src/scss/_components/blog/_blog.scss */
+  /* line 134, src/scss/_components/blog/_blog.scss */
   .blog__quote p {
     font-size: 15px;
   }
 }
 
-/* line 132, src/scss/_components/blog/_blog.scss */
-.blog__video {
+/* line 147, src/scss/_components/blog/_blog.scss */
+.blog__media {
   overflow: hidden;
   position: relative;
   height: 555px;
@@ -2095,20 +2117,20 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 132, src/scss/_components/blog/_blog.scss */
-  .blog__video {
+  /* line 147, src/scss/_components/blog/_blog.scss */
+  .blog__media {
     height: 375px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 132, src/scss/_components/blog/_blog.scss */
-  .blog__video {
+  /* line 147, src/scss/_components/blog/_blog.scss */
+  .blog__media {
     height: 170px;
   }
 }
 
-/* line 151, src/scss/_components/blog/_blog.scss */
+/* line 167, src/scss/_components/blog/_blog.scss */
 .blog__divider {
   width: 100%;
   height: 1px;
@@ -2117,7 +2139,7 @@ picture {
   background-color: #d0cece;
 }
 
-/* line 159, src/scss/_components/blog/_blog.scss */
+/* line 175, src/scss/_components/blog/_blog.scss */
 .blog ul,
 .blog ol {
   display: -webkit-box;
@@ -2132,7 +2154,7 @@ picture {
   padding-bottom: 20px;
 }
 
-/* line 165, src/scss/_components/blog/_blog.scss */
+/* line 181, src/scss/_components/blog/_blog.scss */
 .blog ul li,
 .blog ol li {
   display: -webkit-box;
@@ -2145,13 +2167,13 @@ picture {
           align-items: flex-start;
 }
 
-/* line 170, src/scss/_components/blog/_blog.scss */
+/* line 186, src/scss/_components/blog/_blog.scss */
 .blog ul li > div:nth-of-type(1),
 .blog ol li > div:nth-of-type(1) {
   width: 20px;
 }
 
-/* line 173, src/scss/_components/blog/_blog.scss */
+/* line 189, src/scss/_components/blog/_blog.scss */
 .blog ul li > div:nth-of-type(2),
 .blog ol li > div:nth-of-type(2) {
   -webkit-box-flex: 1;
@@ -2162,7 +2184,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 180, src/scss/_components/blog/_blog.scss */
+/* line 196, src/scss/_components/blog/_blog.scss */
 .blog ul li p,
 .blog ol li p {
   font-weight: 300;
@@ -2172,20 +2194,20 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 180, src/scss/_components/blog/_blog.scss */
+  /* line 196, src/scss/_components/blog/_blog.scss */
   .blog ul li p,
   .blog ol li p {
     font-size: 15px;
   }
 }
 
-/* line 189, src/scss/_components/blog/_blog.scss */
+/* line 205, src/scss/_components/blog/_blog.scss */
 .blog ul li p a,
 .blog ol li p a {
   color: #1155cc;
 }
 
-/* line 198, src/scss/_components/blog/_blog.scss */
+/* line 214, src/scss/_components/blog/_blog.scss */
 .blog ul li i {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2199,7 +2221,7 @@ picture {
   background-color: #252525;
 }
 
-/* line 211, src/scss/_components/blog/_blog.scss */
+/* line 227, src/scss/_components/blog/_blog.scss */
 .blog ol li i {
   font-weight: 300;
   font-size: 17px;
@@ -2208,7 +2230,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 211, src/scss/_components/blog/_blog.scss */
+  /* line 227, src/scss/_components/blog/_blog.scss */
   .blog ol li i {
     font-size: 15px;
   }
