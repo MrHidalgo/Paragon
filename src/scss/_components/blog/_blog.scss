@@ -3,9 +3,14 @@
 .blog {
 	padding-top: 40px;
 	padding-bottom: 70px;
+	font-family: 'Verdana', sans-serif;
 	@include adaptive(767) {
 		padding-top: 30px;
 		padding-bottom: 50px;
+	}
+
+	.c-grid {
+		max-width: 1280px;
 	}
 
 	&__back {
@@ -29,21 +34,24 @@
 	}
 
 	&__img {
-		overflow: hidden;
-		position: relative;
-		width: 100%;
-		height: 344px;
+		//overflow: hidden;
+		//position: relative;
+		//width: 100%;
+		//height: 344px;
 		margin-bottom: 40px;
-		@include adaptive(767) {
-			height: 104px;
-			margin-bottom: 30px;
-		}
+		//@include adaptive(767) {
+		//	height: 104px;
+		//	margin-bottom: 30px;
+		//}
 
 		img {
-			@extend %imageResCoverAbs;
-			@include adaptive(767) {
-				object-position: center top;
-			}
+			display: block;
+			max-width: 100%;
+			height: auto;
+			//@extend %imageResCoverAbs;
+			//@include adaptive(767) {
+			//	object-position: center top;
+			//}
 		}
 	}
 
@@ -79,6 +87,7 @@
 		color: #827a70;
 		@include adaptive(767) {
 			padding-bottom: 20px;
+			font-size: 12px;
 		}
 	}
 

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
-.main__bg img, .details__block-head img, .about__img img, .blog__img img, .blog__media iframe,
+.main__bg img, .details__block-head img, .about__img img, .blog__media iframe,
 .blog__media img,
 .blog__media video {
   position: absolute;
@@ -1890,6 +1890,7 @@ picture {
 .blog {
   padding-top: 40px;
   padding-bottom: 70px;
+  font-family: 'Verdana', sans-serif;
 }
 
 @media screen and (max-width: 767px) {
@@ -1900,7 +1901,12 @@ picture {
   }
 }
 
-/* line 11, src/scss/_components/blog/_blog.scss */
+/* line 12, src/scss/_components/blog/_blog.scss */
+.blog .c-grid {
+  max-width: 1280px;
+}
+
+/* line 16, src/scss/_components/blog/_blog.scss */
 .blog__back {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1913,7 +1919,7 @@ picture {
   margin-bottom: 26px;
 }
 
-/* line 16, src/scss/_components/blog/_blog.scss */
+/* line 21, src/scss/_components/blog/_blog.scss */
 .blog__back .icon-font {
   color: #00000b;
   margin-right: 5px;
@@ -1923,7 +1929,7 @@ picture {
   font-size: 12px;
 }
 
-/* line 23, src/scss/_components/blog/_blog.scss */
+/* line 28, src/scss/_components/blog/_blog.scss */
 .blog__back span {
   color: #00000b;
   font-weight: 300;
@@ -1931,32 +1937,19 @@ picture {
   text-transform: uppercase;
 }
 
-/* line 31, src/scss/_components/blog/_blog.scss */
+/* line 36, src/scss/_components/blog/_blog.scss */
 .blog__img {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 344px;
   margin-bottom: 40px;
 }
 
-@media screen and (max-width: 767px) {
-  /* line 31, src/scss/_components/blog/_blog.scss */
-  .blog__img {
-    height: 104px;
-    margin-bottom: 30px;
-  }
+/* line 47, src/scss/_components/blog/_blog.scss */
+.blog__img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-@media screen and (max-width: 767px) {
-  /* line 42, src/scss/_components/blog/_blog.scss */
-  .blog__img img {
-    -o-object-position: center top;
-       object-position: center top;
-  }
-}
-
-/* line 50, src/scss/_components/blog/_blog.scss */
+/* line 58, src/scss/_components/blog/_blog.scss */
 .blog__title {
   padding-bottom: 22px;
   font-weight: 300;
@@ -1966,20 +1959,20 @@ picture {
 }
 
 @media screen and (max-width: 1365px) {
-  /* line 50, src/scss/_components/blog/_blog.scss */
+  /* line 58, src/scss/_components/blog/_blog.scss */
   .blog__title {
     font-size: 33px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 50, src/scss/_components/blog/_blog.scss */
+  /* line 58, src/scss/_components/blog/_blog.scss */
   .blog__title {
     font-size: 28px;
   }
 }
 
-/* line 64, src/scss/_components/blog/_blog.scss */
+/* line 72, src/scss/_components/blog/_blog.scss */
 .blog__subtitle {
   padding-bottom: 16px;
   font-weight: 300;
@@ -1989,13 +1982,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 64, src/scss/_components/blog/_blog.scss */
+  /* line 72, src/scss/_components/blog/_blog.scss */
   .blog__subtitle {
     font-size: 23px;
   }
 }
 
-/* line 75, src/scss/_components/blog/_blog.scss */
+/* line 83, src/scss/_components/blog/_blog.scss */
 .blog__date {
   padding-bottom: 30px;
   font-weight: 300;
@@ -2004,13 +1997,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 75, src/scss/_components/blog/_blog.scss */
+  /* line 83, src/scss/_components/blog/_blog.scss */
   .blog__date {
     padding-bottom: 20px;
+    font-size: 12px;
   }
 }
 
-/* line 86, src/scss/_components/blog/_blog.scss */
+/* line 95, src/scss/_components/blog/_blog.scss */
 .blog__desc p {
   padding-bottom: 20px;
   font-weight: 300;
@@ -2020,18 +2014,18 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 86, src/scss/_components/blog/_blog.scss */
+  /* line 95, src/scss/_components/blog/_blog.scss */
   .blog__desc p {
     font-size: 15px;
   }
 }
 
-/* line 96, src/scss/_components/blog/_blog.scss */
+/* line 105, src/scss/_components/blog/_blog.scss */
 .blog__desc p strong {
   font-weight: 500;
 }
 
-/* line 102, src/scss/_components/blog/_blog.scss */
+/* line 111, src/scss/_components/blog/_blog.scss */
 .blog__quote {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2046,7 +2040,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 102, src/scss/_components/blog/_blog.scss */
+  /* line 111, src/scss/_components/blog/_blog.scss */
   .blog__quote {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -2054,20 +2048,20 @@ picture {
   }
 }
 
-/* line 112, src/scss/_components/blog/_blog.scss */
+/* line 121, src/scss/_components/blog/_blog.scss */
 .blog__quote > div:nth-of-type(1) {
   width: 84px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 112, src/scss/_components/blog/_blog.scss */
+  /* line 121, src/scss/_components/blog/_blog.scss */
   .blog__quote > div:nth-of-type(1) {
     width: 100%;
     padding-bottom: 10px;
   }
 }
 
-/* line 119, src/scss/_components/blog/_blog.scss */
+/* line 128, src/scss/_components/blog/_blog.scss */
 .blog__quote > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2077,20 +2071,20 @@ picture {
   max-width: 100%;
 }
 
-/* line 126, src/scss/_components/blog/_blog.scss */
+/* line 135, src/scss/_components/blog/_blog.scss */
 .blog__quote .icon-font {
   font-size: 46px;
   color: #ede9e0;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 126, src/scss/_components/blog/_blog.scss */
+  /* line 135, src/scss/_components/blog/_blog.scss */
   .blog__quote .icon-font {
     font-size: 23px;
   }
 }
 
-/* line 134, src/scss/_components/blog/_blog.scss */
+/* line 143, src/scss/_components/blog/_blog.scss */
 .blog__quote p {
   line-height: 1.6;
   font-size: 17px;
@@ -2101,13 +2095,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 134, src/scss/_components/blog/_blog.scss */
+  /* line 143, src/scss/_components/blog/_blog.scss */
   .blog__quote p {
     font-size: 15px;
   }
 }
 
-/* line 147, src/scss/_components/blog/_blog.scss */
+/* line 156, src/scss/_components/blog/_blog.scss */
 .blog__media {
   overflow: hidden;
   position: relative;
@@ -2117,20 +2111,20 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 147, src/scss/_components/blog/_blog.scss */
+  /* line 156, src/scss/_components/blog/_blog.scss */
   .blog__media {
     height: 375px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 147, src/scss/_components/blog/_blog.scss */
+  /* line 156, src/scss/_components/blog/_blog.scss */
   .blog__media {
     height: 170px;
   }
 }
 
-/* line 167, src/scss/_components/blog/_blog.scss */
+/* line 176, src/scss/_components/blog/_blog.scss */
 .blog__divider {
   width: 100%;
   height: 1px;
@@ -2139,7 +2133,7 @@ picture {
   background-color: #d0cece;
 }
 
-/* line 175, src/scss/_components/blog/_blog.scss */
+/* line 184, src/scss/_components/blog/_blog.scss */
 .blog ul,
 .blog ol {
   display: -webkit-box;
@@ -2154,7 +2148,7 @@ picture {
   padding-bottom: 20px;
 }
 
-/* line 181, src/scss/_components/blog/_blog.scss */
+/* line 190, src/scss/_components/blog/_blog.scss */
 .blog ul li,
 .blog ol li {
   display: -webkit-box;
@@ -2167,13 +2161,13 @@ picture {
           align-items: flex-start;
 }
 
-/* line 186, src/scss/_components/blog/_blog.scss */
+/* line 195, src/scss/_components/blog/_blog.scss */
 .blog ul li > div:nth-of-type(1),
 .blog ol li > div:nth-of-type(1) {
   width: 20px;
 }
 
-/* line 189, src/scss/_components/blog/_blog.scss */
+/* line 198, src/scss/_components/blog/_blog.scss */
 .blog ul li > div:nth-of-type(2),
 .blog ol li > div:nth-of-type(2) {
   -webkit-box-flex: 1;
@@ -2184,7 +2178,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 196, src/scss/_components/blog/_blog.scss */
+/* line 205, src/scss/_components/blog/_blog.scss */
 .blog ul li p,
 .blog ol li p {
   font-weight: 300;
@@ -2194,20 +2188,20 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 196, src/scss/_components/blog/_blog.scss */
+  /* line 205, src/scss/_components/blog/_blog.scss */
   .blog ul li p,
   .blog ol li p {
     font-size: 15px;
   }
 }
 
-/* line 205, src/scss/_components/blog/_blog.scss */
+/* line 214, src/scss/_components/blog/_blog.scss */
 .blog ul li p a,
 .blog ol li p a {
   color: #1155cc;
 }
 
-/* line 214, src/scss/_components/blog/_blog.scss */
+/* line 223, src/scss/_components/blog/_blog.scss */
 .blog ul li i {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2221,7 +2215,7 @@ picture {
   background-color: #252525;
 }
 
-/* line 227, src/scss/_components/blog/_blog.scss */
+/* line 236, src/scss/_components/blog/_blog.scss */
 .blog ol li i {
   font-weight: 300;
   font-size: 17px;
@@ -2230,7 +2224,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 227, src/scss/_components/blog/_blog.scss */
+  /* line 236, src/scss/_components/blog/_blog.scss */
   .blog ol li i {
     font-size: 15px;
   }
