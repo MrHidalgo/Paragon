@@ -961,11 +961,6 @@ picture {
 /* line 3, src/scss/_components/homepage/_main.scss */
 .main {
   position: relative;
-  background-image: url("../img/img-main-bg@2x.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
 }
 
 /* line 10, src/scss/_components/homepage/_main.scss */
@@ -981,10 +976,11 @@ picture {
 
 /* line 19, src/scss/_components/homepage/_main.scss */
 .main__bg img {
-  opacity: 0.95;
+  -o-object-position: center bottom;
+     object-position: center bottom;
 }
 
-/* line 25, src/scss/_components/homepage/_main.scss */
+/* line 26, src/scss/_components/homepage/_main.scss */
 .main__wrapper {
   z-index: 2;
   position: relative;
@@ -1004,36 +1000,37 @@ picture {
 }
 
 @media screen and (max-width: 1365px) {
-  /* line 25, src/scss/_components/homepage/_main.scss */
+  /* line 26, src/scss/_components/homepage/_main.scss */
   .main__wrapper {
     height: 550px;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 25, src/scss/_components/homepage/_main.scss */
+  /* line 26, src/scss/_components/homepage/_main.scss */
   .main__wrapper {
     height: 508px;
   }
 }
 
-/* line 40, src/scss/_components/homepage/_main.scss */
+/* line 41, src/scss/_components/homepage/_main.scss */
 .main__title {
   text-align: center;
   font-size: 48px;
   font-family: "Merriweather", sans-serif;
   color: white;
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 1365px) {
-  /* line 40, src/scss/_components/homepage/_main.scss */
+  /* line 41, src/scss/_components/homepage/_main.scss */
   .main__title {
     font-size: 42px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 40, src/scss/_components/homepage/_main.scss */
+  /* line 41, src/scss/_components/homepage/_main.scss */
   .main__title {
     font-size: 30px;
   }

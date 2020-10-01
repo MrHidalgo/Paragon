@@ -2,10 +2,10 @@
 
 .main {
 	position: relative;
-	background-image: url('../img/img-main-bg@2x.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	//background-image: url('../img/img-main-bg@2x.jpg');
+	//background-position: center;
+	//background-repeat: no-repeat;
+	//background-size: cover;
 
 	&__bg {
 		z-index: 0;
@@ -17,8 +17,9 @@
 		background-color: #000000;
 
 		img {
-			opacity: 0.95;
+			//opacity: 0.95;
 			@extend %imageResCoverAbs;
+			object-position: center bottom;
 		}
 	}
 
@@ -42,6 +43,7 @@
 		font-size: 48px;
 		font-family: "Merriweather", sans-serif;
 		color: rgb(255, 255, 255);
+		text-transform: capitalize;
 		@include adaptive(1365) {
 			font-size: 42px;
 		}
