@@ -1457,72 +1457,6 @@ picture {
   }
 }
 
-/* line 14, src/scss/_components/about/_about.scss */
-.about__wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-@media screen and (max-width: 1023px) {
-  /* line 14, src/scss/_components/about/_about.scss */
-  .about__wrapper {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-  }
-}
-
-/* line 21, src/scss/_components/about/_about.scss */
-.about__wrapper-left {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  min-width: 1px;
-  max-width: 100%;
-  padding-right: 74px;
-}
-
-@media screen and (max-width: 1365px) {
-  /* line 21, src/scss/_components/about/_about.scss */
-  .about__wrapper-left {
-    padding-right: 54px;
-  }
-}
-
-@media screen and (max-width: 1279px) {
-  /* line 21, src/scss/_components/about/_about.scss */
-  .about__wrapper-left {
-    padding-right: 34px;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  /* line 21, src/scss/_components/about/_about.scss */
-  .about__wrapper-left {
-    padding-right: 0;
-  }
-}
-
-/* line 37, src/scss/_components/about/_about.scss */
-.about__wrapper-right {
-  width: 100%;
-  max-width: 351px;
-}
-
-@media screen and (max-width: 1023px) {
-  /* line 37, src/scss/_components/about/_about.scss */
-  .about__wrapper-right {
-    max-width: 100%;
-  }
-}
-
 /* line 45, src/scss/_components/about/_about.scss */
 .about__wrapper-right {
   padding-top: 93px;
@@ -1827,6 +1761,7 @@ picture {
 
 /* line 251, src/scss/_components/about/_about.scss */
 .about__form-btn {
+  cursor: pointer;
   outline: none;
   position: relative;
   display: -webkit-box;
@@ -1854,7 +1789,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 265, src/scss/_components/about/_about.scss */
+/* line 266, src/scss/_components/about/_about.scss */
 .about__form-btn:hover {
   background-color: #00000b;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -1862,7 +1797,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 270, src/scss/_components/about/_about.scss */
+/* line 271, src/scss/_components/about/_about.scss */
 .about__form-btn span {
   font-size: 22px;
   color: white;
@@ -1870,14 +1805,14 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 270, src/scss/_components/about/_about.scss */
+  /* line 271, src/scss/_components/about/_about.scss */
   .about__form-btn span {
     font-size: 20px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 270, src/scss/_components/about/_about.scss */
+  /* line 271, src/scss/_components/about/_about.scss */
   .about__form-btn span {
     font-size: 18px;
   }
