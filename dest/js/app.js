@@ -203,6 +203,18 @@ window.addEventListener('scroll', function (ev) {
 			wScrollBefore = wScrollCurrent;
 		});
 	};
+
+	var lessDesc = function lessDesc() {
+		var nWords = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 100;
+		var className = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '[less-js]';
+
+
+		$(className).each(function (ind, val) {
+			var lessText = $(this).text().substring(0, nWords).trim();
+
+			$(this).html(lessText + "...");
+		});
+	};
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -224,6 +236,7 @@ window.addEventListener('scroll', function (ev) {
 		// callback
 		inputFocusAnimated();
 		headerFixedReverse();
+		lessDesc();
 		// ==========================================
 	};
 	initNative();

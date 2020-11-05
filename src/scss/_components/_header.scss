@@ -18,6 +18,12 @@
 		@include transition(box-shadow);
 	}
 
+	&.header--blog {
+		.c-grid {
+			max-width: 1280px;
+		}
+	}
+
 	&__wrapper {
 		display: flex;
 		align-items: center;

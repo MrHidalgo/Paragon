@@ -127,6 +127,10 @@
 		align-items: center;
 		justify-content: space-between;
 
+		&.details__pagination--main {
+			display: none;
+		}
+
 		&-left,
 		&-right {
 			display: flex;

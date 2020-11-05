@@ -1,6 +1,6 @@
 // HEADER :: START
 
-header#header.header
+header#header.header(class!= (headerInnerMod === true)?'header--blog':'')
 	.c-grid
 		.header__wrapper
 			.header__wrapper-left
@@ -26,8 +26,8 @@ header#header.header
 				.header__action
 					a.header__action-btn(href="#")
 						i.icon-font.icon-search
-					a.header__action-btn(href="#")
-						i.icon-font.icon-instagram
+					//a.header__action-btn(href="#")
+					//	i.icon-font.icon-instagram
 
 				.header__copyright
 					.copyright

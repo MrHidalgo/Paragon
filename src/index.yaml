@@ -10,3 +10,9 @@ PageList:
 - file: blog.html
   titleName: Blog
   ready: 33
+- file: blog-2.html
+  titleName: Blog
+  ready: 33
+- file: blog-3.html
+  titleName: Blog
+  ready: 33

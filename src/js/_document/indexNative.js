@@ -64,6 +64,16 @@
 			wScrollBefore = wScrollCurrent;
 		});
 	};
+
+
+	const lessDesc = (nWords = 100, className = '[less-js]') => {
+
+		$(className).each(function(ind, val) {
+			const lessText = $(this).text().substring(0, nWords).trim();
+
+			$(this).html(lessText + "...");
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -86,6 +96,7 @@
 		// callback
 		inputFocusAnimated();
 		headerFixedReverse();
+		lessDesc();
 		// ==========================================
 	};
 	initNative();

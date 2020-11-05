@@ -34,24 +34,26 @@
 	}
 
 	&__img {
-		//overflow: hidden;
-		//position: relative;
-		//width: 100%;
-		//height: 344px;
 		margin-bottom: 40px;
-		//@include adaptive(767) {
-		//	height: 104px;
-		//	margin-bottom: 30px;
-		//}
 
 		img {
 			display: block;
 			max-width: 100%;
 			height: auto;
-			//@extend %imageResCoverAbs;
-			//@include adaptive(767) {
-			//	object-position: center top;
-			//}
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		p {
+			padding-top: 10px;
+			text-align: center;
+			font-weight: 300;
+			font-size: 15px;
+			color: #252525;
+			line-height: 1.6;
+			@include adaptive(767) {
+				font-size: 13px;
+			}
 		}
 	}
 
@@ -78,6 +80,10 @@
 		@include adaptive(767) {
 			font-size: 23px;
 		}
+
+		strong {
+			font-weight: 600;
+		}
 	}
 
 	&__date {
@@ -103,7 +109,7 @@
 			}
 
 			strong {
-				font-weight: 500;
+				font-weight: 600;
 			}
 		}
 	}
@@ -156,20 +162,37 @@
 	&__media {
 		overflow: hidden;
 		position: relative;
-		height: 555px;
 		margin-top: 20px;
 		margin-bottom: 40px;
-		@include adaptive(1279) {
-			height: 375px;
-		}
-		@include adaptive(767) {
-			height: 170px;
+
+		> div {
+			overflow: hidden;
+			position: relative;
+			height: 555px;
+			@include adaptive(1279) {
+				height: 375px;
+			}
+			@include adaptive(767) {
+				height: 170px;
+			}
 		}
 
 		iframe,
 		img,
 		video {
 			@extend %imageResCoverAbs;
+		}
+
+		p {
+			padding-top: 10px;
+			text-align: center;
+			font-weight: 300;
+			font-size: 15px;
+			color: #252525;
+			line-height: 1.6;
+			@include adaptive(767) {
+				font-size: 13px;
+			}
 		}
 	}
 
